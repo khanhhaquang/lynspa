@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, keywords }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
           }
         }
       }
@@ -26,6 +27,7 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaKeywords = keywords || site.siteMetadata.keywords
 
   return (
     <Helmet
@@ -40,32 +42,24 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          property: `og:title`,
-          content: title,
+          name: `keywords`,
+          content: metaKeywords,
         },
         {
           property: `og:description`,
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: `https:/www.lynspa.vn`,
+        },
+        {
+          property: `og:type`,
+          content: `image`,
+        },
+        {
           property: `og:type`,
           content: `website`,
-        },
-        {
-          name: `facebook:card`,
-          content: `summary`,
-        },
-        {
-          name: `facebook:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `facebook:title`,
-          content: title,
-        },
-        {
-          name: `facebook:description`,
-          content: metaDescription,
         },
       ].concat(meta)}
     />

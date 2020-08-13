@@ -1,22 +1,31 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import BackgroundImage from "../components/backgroundImage"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const Background = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  > div {
+    min-height: 100vh;
+  }
+`
+
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Trang chủ" />
+      <Background>
+        <BackgroundImage />
+      </Background>
+    </Layout>
+  )
+}
 
 export default IndexPage
