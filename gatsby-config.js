@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Lyn Spa`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Hãy để Lyn Spa giúp bạn trở thành phiên bản hoàn hảo nhất của chính mình. Chinh phục cả góc nghiêng lẫn góc chính diện với tay nghề của bác sĩ thẩm mỹ có kinh nghiệm nhiều năm. Cam kết bảo hành về chất lượng Filler trọn đời. Sử dụng Filler có nguồn gốc rõ ràng, an toàn, đạt chuẩn. Bác sĩ có chuyên môn thực hiện.`,
     author: `@lynspa`,
     keywords: `Filler, Botox, Botulax, Celosome, Kairax, Làm Đẹp Không Phẩu Thuật, Fusion, Mesotheraphy, Tan Mỡ, Độc Quyền,XFC+, Căng bóng da cao cấp, Tan mỡ cao cấp, Thuốc Châu Âu, Tây Ban Nha, Đào tạo học viên`,
   },
