@@ -199,6 +199,12 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
+  min-height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(80, 43, 43, 1) 100%
+  );
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -547,6 +553,8 @@ li > p {
     "Liberation Mono", Menlo, Courier, monospace;
 }
 
-a {
+a,
+div,
+svg {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
