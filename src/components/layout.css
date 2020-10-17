@@ -556,3 +556,7 @@ div,
 svg {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+main {
+  max-width: 980px;
+}
