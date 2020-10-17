@@ -558,5 +558,6 @@ svg {
 }
 
 main {
-  max-width: 980px;
+  max-width: 860px;
+  margin: auto;
 }
