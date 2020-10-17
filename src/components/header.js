@@ -4,7 +4,12 @@ import React, { useState } from "react"
 import LogoImage from "./logoImage"
 import logo from "../images/logo.png"
 import styled from "styled-components"
-import { IoIosMenu, IoMdCloseCircleOutline } from "react-icons/io"
+import {
+  IoIosMenu,
+  IoIosClose,
+  IoIosArrowDown,
+  IoIosArrowUp,
+} from "react-icons/io"
 const HeaderWrapper = styled.header`
   width: 100%;
   display: flex;
@@ -40,7 +45,7 @@ const Menu = styled.div`
   pointer-events: ${props => (props.isOpen ? "all" : "none")};
 
   .inner {
-    width: 240px;
+    width: 300px;
     min-height: 100%;
     overflow-y: scroll;
     position: fixed;
@@ -78,6 +83,16 @@ const Menu = styled.div`
           text-decoration: none;
           color: #000;
         }
+
+        &.parent {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        &.sub {
+          padding-left: 16px;
+        }
       }
     }
   }
@@ -85,6 +100,7 @@ const Menu = styled.div`
 
 const Header = ({ siteTitle }) => {
   const [isMenuOpen, toggleMenu] = useState(false)
+  const [isSubMenuOpen, toggleSubMenu] = useState(false)
 
   return (
     <HeaderWrapper>
@@ -98,22 +114,30 @@ const Header = ({ siteTitle }) => {
       <Menu isOpen={isMenuOpen} onClick={() => toggleMenu(false)}>
         <div className="inner" onClick={e => e.stopPropagation()}>
           <header>
-            <img src={logo}></img>
-            <IoMdCloseCircleOutline
-              size="24px"
-              onClick={() => toggleMenu(false)}
-            />
+            <img alt="logo" src={logo}></img>
+            <IoIosClose size="24px" onClick={() => toggleMenu(false)} />
           </header>
 
           <ul>
             <li>
               <Link to="/">Trang chủ</Link>
             </li>
-            <li>Thẩm mỹ không phẩu thuật</li>
+            <li
+              className="parent"
+              onClick={() => toggleSubMenu(!isSubMenuOpen)}
+            >
+              Thẩm mỹ không phẩu thuật{" "}
+              {isSubMenuOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            </li>
+            {isSubMenuOpen && (
+              <li className="sub">
+                <a to="/">- Tiêm filler môi</a>
+              </li>
+            )}
             <li>Làm hồng vĩnh viễn</li>
             <li>Các dịch vụ khác</li>
             <li>
-              <Link to="/contact">Liên hệ</Link>
+              <Link to="/lien-he">Liên hệ</Link>
             </li>
           </ul>
         </div>
