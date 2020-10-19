@@ -46,9 +46,9 @@ const Menu = styled.div`
 
   .inner {
     width: 300px;
-    min-height: 100%;
-    overflow-y: scroll;
+    height: 100%;
     position: fixed;
+    overflow-y: auto;
     top: 0;
     left: 0;
     box-shadow: 4px 0px 8px rgba(38, 42, 51, 0.15);
@@ -78,10 +78,16 @@ const Menu = styled.div`
 
       li {
         margin-bottom: 24px;
+        cursor: pointer;
 
         a {
           text-decoration: none;
           color: #000;
+
+          &:hover,
+          &:active {
+            color: blue;
+          }
         }
 
         &.parent {
@@ -130,12 +136,44 @@ const Header = ({ siteTitle }) => {
               {isSubMenuOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </li>
             {isSubMenuOpen && (
-              <li className="sub">
-                <a to="/">- Tiêm filler môi</a>
-              </li>
+              <>
+                <li className="sub">
+                  <Link to="/tiem-filler-moi-la-gi">
+                    - Tiêm Filler môi là gì ?
+                  </Link>
+                </li>
+                <li className="sub">
+                  <Link to="/uu-diem-tiem-moi-filler">
+                    - Ưu điểm khi thực hiện tạo hình môi bằng Filler
+                  </Link>
+                </li>
+                <li className="sub">
+                  <Link to="/nhung-ai-co-the-tiem-filler-moi">
+                    - Những ai có thể thực hiện tiêm Filler môi
+                  </Link>
+                </li>
+                <li className="sub">
+                  <Link to="/quy-trinh-thuc-hien">- Quy trình thực hiện</Link>
+                </li>
+                <li className="sub">
+                  <Link to="/hinh-anh-khach-hang">
+                    - Hình ảnh thực tế khách hàng
+                  </Link>
+                </li>
+                <li className="sub">
+                  <Link to="/cham-soc-sau-khi-tiem">
+                    - Chăm sóc sau khi tiêm Filler
+                  </Link>
+                </li>
+                <li className="sub">
+                  <Link to="/vi-sao-nen-chon-lyn-spa">
+                    - Vì sao nên chọn tiêm Filler môi tại LYN Spa?
+                  </Link>
+                </li>
+              </>
             )}
             <li>Làm hồng vĩnh viễn</li>
-            <li>Các dịch vụ khác</li>
+            {/* <li>Các dịch vụ khác</li> */}
             <li>
               <Link to="/lien-he">Liên hệ</Link>
             </li>

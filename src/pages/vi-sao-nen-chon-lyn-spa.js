@@ -3,11 +3,6 @@ import styled from "styled-components"
 import { IoIosCall, IoLogoFacebook, IoIosMap } from "react-icons/io"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import pic1 from "../images/pic1.png"
-import pic2 from "../images/pic2.png"
-import pic3 from "../images/pic3.png"
-import pic4 from "../images/pic4.png"
-import pic5 from "../images/pic5.png"
 import pic6 from "../images/pic6.png"
 
 const Main = styled.div`
@@ -48,7 +43,7 @@ const Main = styled.div`
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Trang chủ" />
+      <SEO title="Vì sao nên chọn LynSpa" />
       <Main>
         <h2>Vì sao nên chọn tiêm Filler môi tại LYN Spa?</h2>
         <p>

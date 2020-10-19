@@ -3,11 +3,7 @@ import styled from "styled-components"
 import { IoIosCall, IoLogoFacebook, IoIosMap } from "react-icons/io"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import pic1 from "../images/pic1.png"
-import pic2 from "../images/pic2.png"
-import pic3 from "../images/pic3.png"
 import pic4 from "../images/pic4.png"
-import pic5 from "../images/pic5.png"
 
 const Main = styled.div`
   z-index: 1;
@@ -47,30 +43,19 @@ const Main = styled.div`
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Liên hệ" />
+      <SEO title="Những ai có thể tiêm filler môi" />
       <Main>
-        <h2>Liên hệ</h2>
+        <h2>Những ai có thể thực hiện tiêm Filler môi</h2>
+        <div className="img">
+          <img alt="pic4" src={pic4} />
+        </div>
+
         <ul>
-          <li>
-            <a href="tel: 0923456036">
-              <IoIosCall />
-              <span>0923456036</span>
-            </a>
-          </li>
-          <li>
-            <IoLogoFacebook />
-            <a
-              href="https://www.facebook.com/LYN.Spa.TPHCM/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook LynSpa
-            </a>
-          </li>
-          <li>
-            <IoIosMap />
-            <span>122 Nguyễn Thái Học, P. Tân Thành, Q. Tân Phú</span>
-          </li>
+          <li>✌ Người có bờ môi mỏng</li>
+          <li>✌ Người có khuôn môi dáng không đẹp, không rõ đường nét</li>
+          <li>✌ Người có đôi môi không cân xứng</li>
+          <li>✌ Người có môi nhiều nếp nhăn</li>
+          <li>✌ Người muốn sở hữu đôi môi căng mọng, quyến rũ</li>
         </ul>
       </Main>
     </Layout>
