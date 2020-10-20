@@ -78,6 +78,28 @@ const IndexPage = () => {
           nguồn gốc rõ ràng, an toàn, đạt chuẩn. Bác sĩ có chuyên môn thực hiện.
         </p>
         <p>⫸ Liên hệ ngay để nhận ưu đãi !</p>
+        <ul>
+          <li>
+            <a href="tel: 0923456036">
+              <IoIosCall />
+              <span>0923456036</span>
+            </a>
+          </li>
+          <li>
+            <IoLogoFacebook />
+            <a
+              href="https://www.facebook.com/LYN.Spa.TPHCM/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook LynSpa
+            </a>
+          </li>
+          <li>
+            <IoIosMap />
+            <span>122 Nguyễn Thái Học, P. Tân Thành, Q. Tân Phú</span>
+          </li>
+        </ul>
       </Main>
     </Layout>
   )
