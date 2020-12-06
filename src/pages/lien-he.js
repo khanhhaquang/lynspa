@@ -14,33 +14,11 @@ const Main = styled.div`
   color: #fff;
   margin-top: 32px;
 
-  ul {
-    list-style: none;
-
-    li {
-      margin-bottom: 16px;
-
-      svg {
-        width: 24px;
-        height: 24px;
-        margin-right: 16px;
-        vertical-align: top;
-      }
-
-      a {
-        color: #fff;
-      }
-    }
-  }
-
-  .img {
-    width: 100%;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+  a {
+    color: #fff;
+    display: block;
+    margin-bottom: 16px;
+    font-size: 20px;
   }
 `
 
@@ -50,28 +28,25 @@ const IndexPage = () => {
       <SEO title="Liên hệ" />
       <Main>
         <h2>Liên hệ</h2>
-        <ul>
-          <li>
-            <a href="tel: 0923456036">
-              <IoIosCall />
-              <span>0923456036</span>
-            </a>
-          </li>
-          <li>
-            <IoLogoFacebook />
-            <a
-              href="https://www.facebook.com/LYN.Spa.TPHCM/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook LynSpa
-            </a>
-          </li>
-          <li>
-            <IoIosMap />
-            <span>122 Nguyễn Thái Học, P. Tân Thành, Q. Tân Phú</span>
-          </li>
-        </ul>
+        <p>
+          LYN Spa là địa chỉ thẩm mỹ uy tín với các bác sĩ kinh nghiệm trong
+          ngành phẫu thuật thẩm mỹ , luôn hướng tới vẻ đẹp tự nhiên hoàn hảo
+          dành cho khách hàng.
+        </p>
+        <p>
+          Cam kết: Bảo hành về chất lượng thuốc trọn đời. Sử dụng thuốc có nguồn
+          gốc rõ ràng, an toàn, đạt chuẩn. Bác sĩ có chuyên môn thực hiện.
+        </p>
+        <a href="https://www.facebook.com/lynspa.tphcm">
+          LYN SPA - Chuyên Filler Botox
+        </a>
+
+        <address>
+          <IoIosMap /> 122 Nguyễn Thái Học P.Tân Thành Q.Tân Phú TP.HCM
+        </address>
+        <address>
+          <IoIosCall /> 092 3456 036
+        </address>
       </Main>
     </Layout>
   )

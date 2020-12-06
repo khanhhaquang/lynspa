@@ -106,7 +106,7 @@ const Menu = styled.div`
 
 const Header = ({ siteTitle }) => {
   const [isMenuOpen, toggleMenu] = useState(false)
-  const [isSubMenuOpen, toggleSubMenu] = useState(false)
+  const [isSubBotoxOpen, toggleSubBotox] = useState(false)
 
   return (
     <HeaderWrapper>
@@ -130,50 +130,36 @@ const Header = ({ siteTitle }) => {
             </li>
             <li
               className="parent"
-              onClick={() => toggleSubMenu(!isSubMenuOpen)}
+              onClick={() => toggleSubBotox(!isSubBotoxOpen)}
             >
-              Thẩm mỹ không phẩu thuật{" "}
-              {isSubMenuOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              Botox thon gọn cơ
+              {isSubBotoxOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </li>
-            {isSubMenuOpen && (
+            {isSubBotoxOpen && (
               <>
                 <li className="sub">
-                  <Link to="/tiem-filler-moi-la-gi">
-                    - Tiêm Filler môi là gì ?
+                  <Link to="/botox-xoa-nhan-duoi-mat">
+                    - Botox xoá nhăn đuôi mắt
                   </Link>
                 </li>
                 <li className="sub">
-                  <Link to="/uu-diem-tiem-moi-filler">
-                    - Ưu điểm khi thực hiện tạo hình môi bằng Filler
+                  <Link to="/botox-thon-gon-co-body">
+                    - Botox thon gọn cơ body
                   </Link>
                 </li>
                 <li className="sub">
-                  <Link to="/nhung-ai-co-the-tiem-filler-moi">
-                    - Những ai có thể thực hiện tiêm Filler môi
-                  </Link>
-                </li>
-                <li className="sub">
-                  <Link to="/quy-trinh-thuc-hien">- Quy trình thực hiện</Link>
-                </li>
-                <li className="sub">
-                  <Link to="/hinh-anh-khach-hang">
-                    - Hình ảnh thực tế khách hàng
-                  </Link>
-                </li>
-                <li className="sub">
-                  <Link to="/cham-soc-sau-khi-tiem">
-                    - Chăm sóc sau khi tiêm Filler
-                  </Link>
-                </li>
-                <li className="sub">
-                  <Link to="/vi-sao-nen-chon-lyn-spa">
-                    - Vì sao nên chọn tiêm Filler môi tại LYN Spa?
+                  <Link to="/botox-thon-gon-co-ham">
+                    - Botox thon gọn cơ hàm
                   </Link>
                 </li>
               </>
             )}
-            <li>Làm hồng vĩnh viễn</li>
-            {/* <li>Các dịch vụ khác</li> */}
+            <li>
+              <Link to="/tan-mo-chau-au">Tan mỡ Châu Âu</Link>
+            </li>
+            <li>
+              <Link to="/danh-gia">Đánh giá</Link>
+            </li>
             <li>
               <Link to="/lien-he">Liên hệ</Link>
             </li>
