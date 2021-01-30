@@ -42,7 +42,7 @@ const IndexPage = () => {
         </a>
 
         <address>
-          <IoIosMap /> 122 Nguyễn Thái Học P.Tân Thành Q.Tân Phú TP.HCM
+          <IoIosMap /> 17/44 Gò Dầu, P.Tân Quý, Q.Tân Phú, TP.HCM
         </address>
         <address>
           <IoIosCall /> 092 3456 036
